@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+<shoppinglist>
+<order>
+   <product>
+      <id></id>
+      <name></name>
+      <description></description>
+   </product>
+   <quantity>
+   </quantity>
+</order>
+</shoppinglist>
+-->
+
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output method="html"/>
+    <xsl:template match="/">
+        <table border="1" class="right_content">
+            <tr><td colspan="4" class="content_head">Shopping List</td></tr>
+            <tr>
+                <td>
+                    <strong>Name</strong>
+                </td>
+                <td>
+                    <strong>Description</strong>
+                </td>
+                <td>
+                    <strong>Quantity</strong>
+                </td>
+                <td></td>
+            </tr>
+            <xsl:apply-templates/>
+        </table>
+    </xsl:template>
+    <xsl:template match="order">
+        <form method="get" action="Shop">
+        <tr>
+            <td>
+               <xsl:value-of select="product/name"/>
+            </td>
+            <td>
+                <xsl:value-of select="product/description"/>
+            </td>
+            <td>
+                <xsl:value-of select="quantity"/>
+            </td>
+            <td>
+            <xsl:element name="input">
+                <xsl:attribute name="name">id</xsl:attribute>
+                <xsl:attribute name="type">hidden</xsl:attribute>
+                <xsl:attribute name="value"><xsl:value-of select="product/id"/></xsl:attribute>
+            </xsl:element>
+            <xsl:element name="input">
+                <xsl:attribute name="name">action</xsl:attribute>
+                <xsl:attribute name="type">hidden</xsl:attribute>
+                <xsl:attribute name="value">remove</xsl:attribute>
+            </xsl:element>
+            <xsl:element name="input">
+                <xsl:attribute name="type">submit</xsl:attribute>
+                <xsl:attribute name="value">Remove</xsl:attribute>
+            </xsl:element>
+            </td>
+        </tr>
+        </form>
+    </xsl:template>
+
+
+</xsl:stylesheet>

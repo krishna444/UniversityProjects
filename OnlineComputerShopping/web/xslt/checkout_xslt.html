@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+<checkout>
+<shoppinglist>
+<shoppingitem>
+    <product>
+        <id>1</id>
+        <name>ACER1982</name>
+        <description>These are cheaper laptop brands appropriate for students</description>
+    </product>
+    <quantity></quantity>
+    <cost>0.0</cost>
+</shoppingitem>
+<shoppingitem>
+    <product>
+        <id>1</id>
+        <name>ACER1982</name>
+        <description>These are cheaper laptop brands appropriate for students</description>
+    </product>
+    <quantity></quantity>
+    <cost>0.0</cost>
+</shoppingitem>
+</shoppinglist>
+ <billinginfo>
+    <firstname></firstname>
+    <middlename></middlename>
+    <lastname></lastname>
+    <address></address>
+    <zip></zip>
+    <city></city>
+ <billinginfo>
+</checkout>
+-->
+
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output method="html"/>
+    <xsl:template match="/">
+        <xsl:apply-templates select="checkout/billinginfo"/>
+        <br/>
+        <xsl:apply-templates select="checkout/shoppinglist"/>
+    </xsl:template>
+
+    <xsl:template match="checkout/billinginfo">
+        <table  border="1" class="right_content">
+            <tr><td colspan="2" class="content_head">Customer Profile</td></tr>
+            <tr>
+                <td>Customer Name:</td>
+                <td>
+            <xsl:element name="input">
+                <xsl:attribute name="name">customer_name</xsl:attribute>
+                <xsl:attribute name="type">text</xsl:attribute>
+                <xsl:attribute name="value"><xsl:value-of select="lastname"/> </xsl:attribute>
+            </xsl:element>
+            </td>
+            </tr>
+
+
+            <tr>
+                <td>Address:</td>
+                <td>
+            <xsl:element name="input">
+                <xsl:attribute name="name">address</xsl:attribute>
+                <xsl:attribute name="type">text</xsl:attribute>
+                <xsl:attribute name="value"><xsl:value-of select="address"/></xsl:attribute>
+            </xsl:element>
+            </td>
+            </tr>
+            <tr>
+                <td>Post Box:</td>
+                <td>
+            <xsl:element name="input">
+                <xsl:attribute name="name">postbox</xsl:attribute>
+                <xsl:attribute name="type">text</xsl:attribute>
+                <xsl:attribute name="value"><xsl:value-of select="zip"/></xsl:attribute>
+            </xsl:element>
+
+            </td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td>
+            <xsl:element name="input">
+                <xsl:attribute name="name">city</xsl:attribute>
+                <xsl:attribute name="type">text</xsl:attribute>
+                <xsl:attribute name="value"><xsl:value-of select="city"/></xsl:attribute>
+            </xsl:element>
+
+            </td>
+            </tr>
+        </table>
+       
+
+    </xsl:template>
+     <xsl:template match="checkout/shoppinglist">
+        <table  border="1" class="right_content">
+            <tr><td colspan="4" class="content_head">Selected List of Items</td></tr>
+            <tr>
+                <td><strong>Product Name</strong></td>
+                <td><strong>Description</strong></td>
+                <td><strong>Quantity</strong></td>
+                <td><strong>Cost</strong></td>
+            </tr>
+            <xsl:apply-templates/>
+        </table>
+     </xsl:template>
+
+
+    <xsl:template match="shoppingitem">
+        <tr>
+        <td><xsl:value-of select="product/name"/></td>
+        <td><xsl:value-of select="product/description"/></td>
+        <td><xsl:value-of select="quantity"/></td>
+        <td><xsl:value-of select="cost"/></td>
+        </tr>
+    </xsl:template>
+
+
+
+
+</xsl:stylesheet>
+

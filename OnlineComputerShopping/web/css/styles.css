@@ -1,0 +1,330 @@
+/*	FRAMEWORK	*/
+body{
+    background: #FFFFFF;
+    margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+    padding: 0;
+    text-align: center;
+}
+#container{ float: none; position: relative;
+            width: 1024px; margin: 0 auto; margin-top: 5px; margin-bottom: 5px;}
+#top{
+    border: 1px solid #669966;
+    background-color: #669966;
+    clear: right;
+    position: relative;
+    height: 95px;
+}
+
+#logo{
+    height: 92px;
+    float: left;
+    width: 150px;
+}
+.logo{
+    border: 2px solid white;
+}
+
+#head{
+    position: relative;
+    margin-left: 5px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    width: 854px;
+    float: left;
+    border-style: none;
+    clear: right;
+
+}
+#top_hor_bar{
+    height: 3px;
+    background-color:#C3FFA4;
+    /*width:1022px;*/
+    width: 762px;
+    float: right;
+    position:relative;
+    clear: left;
+}
+#top_ver_bar{
+    background-color:#C3FFA4;
+    width: 3px;
+    height: 92px;
+    float: right;
+}
+
+#content
+{
+	position: relative;
+        /*height: 500px;*/
+        overflow:hidden;
+	border-left: 1px solid #669966;
+	border-right: 1px solid #669966;        
+        padding-top: 50px;
+}
+#foot{
+    border:1px solid #669966;
+    clear: left;
+    height: 90px;
+}
+#left{
+	margin-right: 5px;
+	position: relative;
+	float: left;
+	/*border-right: 1px solid #669966;*/
+	height: 500px;
+	width: 150px;
+        
+}
+#right{
+	width: 849px;
+	padding-left: 10px;
+	position: relative;
+	float: left;
+        /*border-left: 1px solid #669966;*/
+        padding-bottom: 10px;
+}
+
+#site_heading{
+    clear: none;
+    left: 150px;
+    top: 30px;
+    position: relative;
+    font-family: Tahoma;
+    font-size: 25px;
+    color: #FFFFFF;
+    width:500px;
+}
+#login_links {
+    position:absolute;
+    left: 680px;
+    top: 5px;
+    width: 200px;
+    float: left;
+    font-family: Tahoma;
+    color:white;
+    font-size: 12px;
+}
+#login_links a{
+    font-family: Tahoma;
+    color: white;
+    /*display: inline;*/
+    text-decoration: underline;
+    padding: 3px;
+}
+#login_links a:hover{
+    text-decoration: none;
+}
+
+#site_foot{
+    font-family: Tahoma;
+    font-size: 13px;
+    color: #669966;
+    text-align: center;
+    display: block;
+    top:20px;
+    position: relative;
+}
+
+/*	AUTHENTICAITON BOX	*/
+#auth_box{
+    position: relative;
+    top: 125px;
+    left: 250px;
+    width: 300px;
+}
+#auth_head{
+    background-color: #669966;
+    color: white;
+    font-size: 20px;
+    width: 150px;
+    font-family: Tahoma;
+    padding: 5px;
+    position: relative;
+    clear: right;
+}
+#auth{
+    border: 2px solid #669966;
+    position: relative;
+}
+.authtable
+{
+    position: relative;
+    left: 20px;
+    top:20px;
+
+}
+input text{
+    width: 200px;
+    border-right: 1px solid #669966;
+    border-bottom: 1px solid #669966;
+}
+.auth_link{
+    font-family: Tahoma;
+    font-size: 11px;
+    text-decoration: underline;
+    color: #669966;
+}
+a.auth_link:hover{
+    text-decoration: none;
+}
+
+/*	LEFTBAR	*/
+#linkcontainer{
+    position: relative;
+    top: 100px;
+    left: 10px;
+    border-right: 1px solid #669966;
+    margin-right: 5px;
+}
+a.leftmenulink{
+    background-color: #669966;
+    display: block;
+    width: 120px;
+    padding: 5px;
+    border-bottom: 1px solid white;
+    color: white;
+    font-family: Tahoma;
+    border-left: 3px solid #C3FFA4;
+    text-decoration: none;
+    font-size: 12px;
+}
+a.leftmenulink:hover{
+    background-color:#C3FFA4;
+    color: black;
+    padding-left: 15px;
+    width: 110px;
+}
+
+#top_menu_bar		{ top: 0px; left: -1px; float:left; position:relative; width:100%; clear:both; border-left:1px solid #669966; border-right:1px solid #669966; }
+#top_menu_bar ul	{ margin:0; padding-left:500px;  list-style: none;}
+#top_menu_bar ul li	{ float: left;background-color: #669966;}
+#top_menu_bar a         { display: block; text-decoration: underline; color: white; padding:8px;}
+#top_menu_bar a:hover   { color:black; background-color:#C3FFA4; display: block; text-decoration: none; border: 1px solid #669966; padding: 7px; }
+
+/*    ORDERS XSL    */
+.content_head{
+    font-family: Arial;
+    font-size: large;
+    padding: 0px 0px 10px 0px;
+    color: #669966;
+    text-align: center;
+    text-decoration: underline;
+
+}
+.right_content{
+    /*position:relative;*/
+    top:10px;
+    left:100px;
+    width:100%;
+    border:1px solid #669966;
+    font-family: Tahoma;
+    font-size:12px;
+    text-align: left;
+}
+.right_content_detail{
+    text-align: right;
+}
+/*  hover component description*/
+
+.comp_div{
+    color:black;
+    background-color:yellow;
+}
+#comp_desc_prod{
+    font-family: Arial;
+    font-size: 12px;
+    background-color:aqua;
+    display: none;
+    width:100px;
+}
+#comp_desc {
+    font-family: Arial;
+    font-size: 12px;
+    background-color:yellow;
+    display: none;
+}
+
+.comp_div .comp_link{
+    display: inline;
+    float: left;
+    padding: 2px 6px 2px 4px;
+
+}
+.comp_div:hover #comp_desc{
+    display: block;
+    z-index:1;
+    width:100px;
+    float:right;
+    position: absolute;
+    top:0px;
+    right:0px;
+    padding:8px 5px 5px;
+    border:1px solid #900;
+}
+.comp_div:hover #comp_desc_prod{
+    display: block;
+    z-index:1;
+    width:100px;
+    float:right;
+    position: absolute;
+    top:0px;
+    right:0px;
+    padding:8px 5px 5px;
+    border:1px solid #900;
+}
+.textfield{
+    width:160px;
+    border:1px solid #669966;
+}
+.customer_button{
+    width: 120px;
+    color: #669966;
+    border-right:2px solid #669966;
+    border-bottom:2px solid #669966;
+    border-top:1px solid #669966;
+    border-left:1px solid #669966;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+.customer_button:hover{
+    border-right:1px solid #669966;
+    border-bottom:1px solid #669966;
+}
+.customer_button:active{
+    color:red;
+    border-right:2px solid red;
+    border-bottom:2px solid red;
+}
+.customer_list{
+    display:block;width:300px; border: 1px solid red;
+}
+
+/*  hover component description*/
+.comp_div .comp_desc {
+    background-color : #FF0000;
+    display: none;
+}
+.comp_div .comp_link{
+    color:#669966;
+
+}
+.comp_div:hover .comp_desc{
+    display: block;
+    position:absolute;
+    z-index:1;
+    left:50px;
+    top:50px;
+    width:100px;
+    padding:8px 5px 5px;
+    border:1px solid #900;
+    background-color:#FFEFEF;
+}
+.products{
+    width:100%;
+    border:1px solid red;
+}
+.stock_head{
+    font:100 large arial;
+    color:#669966;
+    background-color: #C3FFA4;
+}

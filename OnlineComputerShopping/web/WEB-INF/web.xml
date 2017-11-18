@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <!--Servlet Configuration!-->
+    <servlet>
+        <servlet-name>ShoppingServlet</servlet-name>
+        <servlet-class>servlets.ShoppingServlet</servlet-class>
+        <init-param>
+            <param-name>CustomerPage</param-name>
+            <param-value>/customer.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ProductPage</param-name>
+            <param-value>/products.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>DetailPage</param-name>
+            <param-value>/detail.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>CheckoutPage</param-name>
+            <param-value>/checkout.jsp</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>ErrorPage</param-name>
+            <param-value>/error.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>SuccessPage</param-name>
+            <param-value>/success.jsp</param-value>
+        </init-param>
+
+    </servlet>
+    <servlet>
+        <servlet-name>LoginValidationServlet</servlet-name>
+        <servlet-class>servlets.LoginValidationServlet</servlet-class>
+        <init-param>
+            <param-name>CustomerPage</param-name>
+            <param-value>/customer.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>LoginPage</param-name>
+            <param-value>/login.jsp</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>servlets.AdminServlet</servlet-class>
+        <init-param>
+            <param-name>ADMIN_HOME</param-name>
+            <param-value>/admin/home.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ADMIN_LOGIN</param-name>
+            <param-value>/login.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ADMIN_ORDERS</param-name>
+            <param-value>/admin/orders.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ADMIN_STOCKS</param-name>
+            <param-value>/admin/stocks.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ADMIN_PRODUCT</param-name>
+            <param-value>/admin/product.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ADMIN_COMPONENT</param-name>
+            <param-value>/admin/component.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ADMIN_RESULT</param-name>
+            <param-value>/admin/result.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ADMIN_COMPONENTS</param-name>
+            <param-value>/admin/components.jsp</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShoppingServlet</servlet-name>
+        <url-pattern>/Shop</url-pattern>
+    </servlet-mapping>    
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin/Admin</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>JDBC_URL</param-name>
+        <param-value>jdbc:mysql://localhost/dbComputerShopping?user=root&amp;password=00977</param-value>
+    </context-param>
+
+    <!--
+    Added Later
+    -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>TheShop</web-resource-name>
+            <url-pattern>/customer.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>user</role-name>
+            <role-name>manager</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Checkout</web-resource-name>
+            <url-pattern>/checkout.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>user</role-name>
+            <role-name>manager</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>TheShopAdmin</web-resource-name>
+            <url-pattern>/admin/home.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/login.jsp</form-login-page>
+            <form-error-page>/login_error.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+
+
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+            <taglib-location>WEB-INF/tlds/c.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+
+-
+
+    </web-app>
