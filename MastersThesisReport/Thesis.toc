@@ -1,0 +1,60 @@
+\contentsline {chapter}{\numberline {1}Introduction}{13}
+\contentsline {section}{\numberline {1.1}X-Ray Imaging}{14}
+\contentsline {section}{\numberline {1.2}Pixel Based Alignment}{16}
+\contentsline {section}{\numberline {1.3}Feature Based Alignment}{17}
+\contentsline {section}{\numberline {1.4}Image Stitching Process}{17}
+\contentsline {section}{\numberline {1.5}Challenges of Image Stitching}{18}
+\contentsline {chapter}{\numberline {2}Related Work}{19}
+\contentsline {chapter}{\numberline {3}Background Theory}{21}
+\contentsline {section}{\numberline {3.1}Image Representation}{21}
+\contentsline {subsection}{\numberline {3.1.1}Matrices}{21}
+\contentsline {subsection}{\numberline {3.1.2}Pyramids}{21}
+\contentsline {section}{\numberline {3.2}Brightness Transformation}{23}
+\contentsline {section}{\numberline {3.3}Geometric Transformation}{24}
+\contentsline {section}{\numberline {3.4}Image Smoothing}{25}
+\contentsline {section}{\numberline {3.5}Edge Detection}{26}
+\contentsline {subsection}{\numberline {3.5.1}Laplacian of Gaussian}{26}
+\contentsline {subsection}{\numberline {3.5.2}Approximation with Difference of Gaussian}{27}
+\contentsline {section}{\numberline {3.6}Error Metrics}{27}
+\contentsline {section}{\numberline {3.7}Corners in Image}{29}
+\contentsline {subsection}{\numberline {3.7.1}Requirements of a Corner Detector}{29}
+\contentsline {subsection}{\numberline {3.7.2}Corner Detection}{30}
+\contentsline {chapter}{\numberline {4}Feature Extraction}{31}
+\contentsline {section}{\numberline {4.1}Preprocessing}{31}
+\contentsline {section}{\numberline {4.2}Feature Extraction}{33}
+\contentsline {subsection}{\numberline {4.2.1}Harris Corner Detection}{33}
+\contentsline {subsection}{\numberline {4.2.2}SIFT}{34}
+\contentsline {subsection}{\numberline {4.2.3}SURF}{37}
+\contentsline {section}{\numberline {4.3}Experimental Results}{43}
+\contentsline {subsection}{\numberline {4.3.1}Experiment 1: Computational Time}{44}
+\contentsline {subsection}{\numberline {4.3.2}Experiment 2: Stability}{45}
+\contentsline {chapter}{\numberline {5}Features Matching}{47}
+\contentsline {section}{\numberline {5.1}kNN Matching}{47}
+\contentsline {section}{\numberline {5.2}ANN Matching}{47}
+\contentsline {section}{\numberline {5.3}Removing False Matches}{48}
+\contentsline {subsection}{\numberline {5.3.1}Ratio Test}{48}
+\contentsline {subsection}{\numberline {5.3.2}Symmetry Test}{49}
+\contentsline {section}{\numberline {5.4}Experimental Results}{50}
+\contentsline {subsection}{\numberline {5.4.1}SIFT versus SURF}{50}
+\contentsline {subsection}{\numberline {5.4.2}kNN versus ANN}{51}
+\contentsline {subsection}{\numberline {5.4.3}Getting Accurate Matches}{51}
+\contentsline {chapter}{\numberline {6}Homography Estimation}{55}
+\contentsline {section}{\numberline {6.1}Algorithm for homography Estimation}{55}
+\contentsline {section}{\numberline {6.2}Robust Estimation}{56}
+\contentsline {subsection}{\numberline {6.2.1}RANSAC}{56}
+\contentsline {subsection}{\numberline {6.2.2}Least Median of Squares Regression}{57}
+\contentsline {section}{\numberline {6.3}Experimental Results}{58}
+\contentsline {subsection}{\numberline {6.3.1}Robust Estimation with RANSAC}{58}
+\contentsline {subsection}{\numberline {6.3.2}Effect of Distance Threshold ($\sigma $)}{59}
+\contentsline {chapter}{\numberline {7}Compositing}{61}
+\contentsline {section}{\numberline {7.1}Transformation}{61}
+\contentsline {section}{\numberline {7.2}Blending}{63}
+\contentsline {subsection}{\numberline {7.2.1}Optimal Seam Blending}{63}
+\contentsline {subsection}{\numberline {7.2.2}Alpha Blending}{63}
+\contentsline {subsection}{\numberline {7.2.3}Pyramid Blending}{64}
+\contentsline {section}{\numberline {7.3}Exposure Compensation}{65}
+\contentsline {section}{\numberline {7.4}Experimental Results}{66}
+\contentsline {subsection}{\numberline {7.4.1}Alpha Blending versus Pyramid Blending}{66}
+\contentsline {subsection}{\numberline {7.4.2}Blending Masks}{68}
+\contentsline {chapter}{\numberline {8}Conclusion}{71}
+\contentsline {chapter}{\numberline {9}Limitations \& Future Work}{73}

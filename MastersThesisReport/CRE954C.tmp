@@ -1,0 +1,51 @@
+\documentclass[11pt, a4paper,twoside,openright]{book}
+
+%\usepackage{appendix}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subfig}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\bibliographystyle{alpha}
+\begin{document}
+
+\frontmatter
+	\include{1.frontmatter/TitlePage}
+	% Abstract
+	\include{1.frontmatter/Abstract}	
+	% Optional dedication
+  \include{1.frontmatter/Dedication}
+  %Acknowledgements   
+  \include{1.frontmatter/Acknowledgements}   
+  
+  \tableofcontents   
+   
+  % Optional tables
+  \listoftables
+  \listoffigures
+  
+\mainmatter
+  %Introduction
+  \include{2.mainmatter/1.Introduction/Introduction}  
+  %Methodology
+  \include{2.mainmatter/2.Methodology/Methodology}
+	%Implementation
+	\include{2.mainmatter/3.Implementation/Implementation}
+  %Evaluation
+  \include{2.mainmatter/4.Evaluation/Evaluation}
+  %Conclusion
+  \include{2.mainmatter/Conclusion}
+  %Conclusion
+  \include{2.mainmatter/Extension}
+	
+  
+
+\backmatter  
+  \bibliography{3.backmatter/references}
+	%\begin{appendix}
+  %\include{3.backmatter/appendix_matrix}
+	%\include{3.backmatter/appendix_installation}
+	%\include{3.backmatter/appendix_srccode}
+	%\end{appendix}
+\end{document}

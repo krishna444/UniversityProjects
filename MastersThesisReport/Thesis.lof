@@ -1,0 +1,63 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Production of X-ray}}{15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {X-ray Tube}}}{15}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {X-ray image of Chest}}}{15}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces X-ray Imaging System}}{16}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{16}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{16}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Matching Using a DT}}{20}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Image in Matrix Form}}{22}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Image Pyramids}}{22}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Histogram Transformation}}{23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{23}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{23}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Comparison of DoG and LoG}}{27}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Flowchart for Corner Detectors}}{30}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Overlapping Area Prediction}}{32}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{32}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{32}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Construction of DoG Image}}{35}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Maxima and Minima of DoG Images}}{36}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Creation of Key-point Descriptor}}{37}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Calculation of Sum of Intensities}}{38}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Approximation of Gaussian Partial Derivative}}{39}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Scale Space Generation}}{40}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Scaling in Octaves}}{40}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Haar Wavelets}}{41}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Orientation Assignment}}{41}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Descriptor Components}}{42}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Comparison: Computational Time}}{44}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Comparison: Stability of Corners}}{46}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces kNN Search}}{48}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Comparison of SIFT and SURF}}{50}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Comparison of kNN and ANN}}{51}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Steps of Getting Best Matches}}{53}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Nearest neighborhood matches}}}{53}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ratio Test}}}{53}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Symmetry Test}}}{53}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Matches After Removing Outliers}}{59}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Distance Threshold and Inliers Count}}{60}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Compositing}}{62}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Alpha Blending}}{64}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Alpha Blending versus Pyramid Blending}}{67}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{67}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{67}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{67}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{67}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Complex Alignment}}{68}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{68}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{68}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Blending Masks}}{69}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left}}}{69}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Top}}}{69}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Right}}}{69}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Bottom}}}{69}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Blending with Masks}}{69}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

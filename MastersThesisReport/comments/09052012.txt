@@ -1,0 +1,34 @@
+Hi Krishna,
+
+I've finally managed to read this. Sorry for the delay. Here are some comments:
+
+- The extent of explanations and so forth is nice.
+
+- Language use: it seems to me that the first two pages are written better than the rest. But in general the language is acceptable. I do expect that you run a spell checker over any document before you send it to me.
+
+- The first bullet point on page 3 ends with two sentences that didn't make sense to me: "But x-ray tube is rotated laterally, ..." => done
+
+- Above that, on the same page, you talk about photographic plates and film. How about digital image recording systems? I assume you have worked with a modern x-ray machine that doesn't use photographic film!?
+
+- On the next page, at the top: "operative voltage peak and milliampere..." Milliampere is a unit of measurement, not a quantity. Use the term "current". => done
+
+- In that same paragraph: "The blackened film has too much information on it." How is that possible? How can you ever have too much information? An overexposed film is all black, meaning there is too little information, no? A correctly exposed film has all the information you can get out of the x-ray imaging. Both underexposing and overexposing the film cause loss of information.
+
+- Figure 1.3 has two parts. The upper part doesn't seem to add any information, it is a simplified version of the lower part. The lower part, because this is such a linear process, does not do much to help understand the sequence of operations. I very much prefer the list with 5 items you use in the text. The figure doesn't add anything, in my opinion, and might as well not be there at all.
+
+- Page 6, start of section 1.5: "each step should result accurate output to get the accurate output." This seems rather obvious. I think you might want to rephrase this! =>done
+
+- Page 9: I'd start a new paragraph after your sentence about Robert Barker, because the next sentence seems to be related to that, but is not, which is confusing. =>done
+
+- Page 9: "Champer" -> "Chamfer" =>done
+
+- Page 14: I've never used bilinear transformation, and am not sure you should mention it if you don't use it. Figure 3.4 shows a bunch of transformations you don't talk about in the text (which is confusing!), but doesn't mention the bilinear one. =>done
+
+- Page 17: the Laplace filter is not an edge detector! The Prewitt filter is an even worse derivative than the Sobel, and there is no reason ever to use it. I hope you didn't use it in your work, and see no reason to mention it here. I would prefer if you used and talked about the Gaussian derivatives rather than the Sobel filters. =>done
+
+- Bibliography: You need to give complete bibliographical information about the papers you cite. Most of your citations do not include a journal name, and the one that does, doesn't have a volume number of page number.
+
+Cheers,
+Cris,
+
+PS: I hope the visa thing has been solved!

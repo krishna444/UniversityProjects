@@ -1,0 +1,35 @@
+See attached file for comments. I used Okular on Linux to make these comments, I hope you don't have problems seeing them.
+
+The layout and general content are fine. You're doing great!
+
+A few general comments:
+
+- Start numbering pages with 1 at the very first page, not at chapter 1. That way the page numbers in the table of content match the PDF page numbers, which makes it easier to find a specific section.
+
+- Please use either the [1] or the (Doe 2012) style for citations. The system you're using is more confusing than helpful in my opinion. The citation, in either of these methods, is not a part of the text. Thus, you should not write "this is described in [1].", as that is not a complete sentence if you remove the citation. Instead, you could write "this is described by Doe [1]." In LaTeX, use "\citep" or "\citet" to get "[1]" or "Doe [1]", respectively. Also, use a non-breaking space before \citep: "this is right~\citep{Doe2012}."
+
+- Use the spell checker!!!
+
+
+
+Sorry for the delay, I've been rather busy preparing lectures and several documents. I hope you sent your thesis to your opponent, so he/she has time to read it before your presentation Friday.
+
+Don't worry, you'll have time after the presentation also to fix things in your thesis, if necessary.
+
+I think your report looks really nice now. Some comments:
+
+- Eq. 4.2-4.4 show derivatives convolved with a Gaussian window. Why don't you use Gaussian derivatives, as you do in Eq. 4.16-4.18?
+
+- All graphs (fig 4.12, 4.13, 5.2, 5.3) need axis labels with units etc.
+
+- Table 4.1 and Fig 4.12 contain the same data. This is redundant and doesn't help the reader at all. This is a typical issue where you are afraid of "loosing information" when you plot the graph, and you are tempted to write down all the numbers that are presented in the graph. Sometimes you'll see graphs with numbers written on them. This defeats the purpose of the graph. If you feel that you need to show the numbers with all the precision you have in the table, then you don't need a graph. A graph simplifies and abstracts data, makes it easier to compare. If that is what you want, then you don't need all that precision that you show in the table. I would prefer the graph in this case, as you want to compare values. From the graph I see that the values for SIFT are ~50% more than those for SURF in all cases. I don't care if the value under 'scale' is 1000 or 1019.413. That's the same to me.
+
+- That leads me to the issue of precision in these numbers. You measured 1019.413 ms when running SIFT on the 'scale' image. If you run it again, this might be 1018.624 or 1015.156 or anything else. Does that 0.413 really mean anything? Of course not! Just because your software outputs a number with that many digits, doesn't mean that all those digits are useful or meaningful. Estimate the precision of a measurement, then report only the meaningful digits. For example, 4.56745 +- 0.0100 -> 4.56.
+
+- The same discussion applies to Table 4.3 and Fig 4.13.
+
+- What is shown in Table 4.2 is not directly clear. The text in section 4.3.2 should explain that a little better.
+
+- Table 7.1: again, the discussion about precision. You are giving timing with microseconds precision, and errors with more digits that I care to count. For the time, I'd guess milliseconds is the maximum useful precision. For the error, show 4 or 5 digits.
+
+- Page 68: one figure reference is broken, it says [?] in the text.

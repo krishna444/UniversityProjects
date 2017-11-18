@@ -1,0 +1,72 @@
+\documentclass[11pt, a4paper,twoside,openright]{book}
+
+%\usepackage{appendix}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subfig}
+\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{natbib}
+\usepackage{epstopdf}
+\usepackage{xspace}
+\usepackage{pdfpages}
+\lefthyphenmin=6
+\righthyphenmin=6
+\restylefloat{figure}
+\usetikzlibrary{shapes,arrows}
+\bibliographystyle{plain}
+
+\renewcommand{\deg}{\ensuremath{^{\circ}}\xspace}
+\newcommand{\imgsrc}[1]{\tiny{\textit{#1}}}
+
+
+\begin{document}
+\setcounter{page}{13}
+\frontmatter
+\includepdf{1.frontmatter/TitlePagePDF}
+	\newpage
+	\thispagestyle{empty}
+	\mbox{}
+	%\newpage
+	% Abstract
+	\includepdf{1.frontmatter/AbstractPDF}	
+	\newpage
+	\thispagestyle{empty}
+	\mbox{}
+	%\newpage
+	% Optional dedication
+  \include{1.frontmatter/Dedication}
+  %Acknowledgements   
+  \include{1.frontmatter/Acknowledgements}   
+  
+  \tableofcontents   
+   
+  % Optional tables
+  \listoftables
+  \listoffigures
+  
+\mainmatter
+\setcounter{page}{13}
+  %Introduction
+  \include{2.mainmatter/1.Introduction/Introduction}  
+  %Methodology
+  \include{2.mainmatter/2.Methodology/Methodology}
+	
+	%Conclusion
+  \include{2.mainmatter/Conclusion}
+  %extension
+  \include{2.mainmatter/Extension}
+	
+  
+
+\backmatter  
+  \bibliography{3.backmatter/references}
+	\begin{appendix}
+  %\include{3.backmatter/appendix_matrix}
+	%\include{3.backmatter/appendix_installation}
+	%\include{3.backmatter/appendix_srccode}
+	%\include{3.backmatter/appendix_results}
+	\end{appendix}
+\end{document}

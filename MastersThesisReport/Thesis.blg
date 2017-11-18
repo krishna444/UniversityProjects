@@ -1,0 +1,24 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Thesis.aux
+The style file: plain.bst
+A level-1 auxiliary file: 1.frontmatter/Dedication.aux
+A level-1 auxiliary file: 1.frontmatter/Acknowledgements.aux
+A level-1 auxiliary file: 2.mainmatter/1.Introduction/Introduction.aux
+A level-1 auxiliary file: 2.mainmatter/2.Methodology/Methodology.aux
+A level-1 auxiliary file: 2.mainmatter/Conclusion.aux
+A level-1 auxiliary file: 2.mainmatter/Extension.aux
+Database file #1: 3.backmatter/references.bib
+Warning--entry type for "Sinha:10:online" isn't style-file defined
+--line 142 of file 3.backmatter/references.bib
+Warning--entry type for "Durnavich:00:online" isn't style-file defined
+--line 191 of file 3.backmatter/references.bib
+Warning--entry type for "Sprawls:online" isn't style-file defined
+--line 200 of file 3.backmatter/references.bib
+Warning--I'm ignoring Garcia:10's extra "title" field
+--line 346 of file 3.backmatter/references.bib
+Warning--entry type for "wiki:google-street-view" isn't style-file defined
+--line 510 of file 3.backmatter/references.bib
+A bad cross reference---entry "uyttendaele:01"
+refers to entry "conf/cvpr/2001", which doesn't exist
+Warning--I didn't find a database entry for "conf/cvpr/2001"
+Warning--empty journal in Donoho:09
+(There was 1 error message)

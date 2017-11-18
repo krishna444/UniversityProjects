@@ -1,0 +1,235 @@
+\begin{thebibliography}{10}
+
+\bibitem{Bay:08}
+Herbert Bay, Andreas Ess, Tinne Tuytelaars, and Luc Van~Gool.
+\newblock Speeded-up robust features (surf).
+\newblock {\em Comput. Vis. Image Underst.}, 110(3):346--359, June 2008.
+
+\bibitem{Brown:02}
+Matthew Brown and David Lowe.
+\newblock Invariant features from interest point groups.
+\newblock In {\em In British Machine Vision Conference}, pages 656--665, 2002.
+
+\bibitem{Donoho:09}
+David~L. Donoho and Ery Arias-Castro.
+\newblock Does median filtering truly preserve edges better than linear
+  filtering?
+\newblock 2006.
+
+\bibitem{Dubrofsky:07}
+Elan Dubrofsky.
+\newblock Homography estimation.
+\newblock Master's thesis, The University of British Columbia, 2009.
+
+\bibitem{Durnavich:00:online}
+Joe Durnavich.
+\newblock Making sense of the head x-rays.
+\newblock http://mcadams.posc.mu.edu/xray/reading/reading.htm, apr 2010.
+\newblock Accessed: 20/07/2012.
+
+\bibitem{Evans:09}
+Christopher Evans.
+\newblock Notes on the opensurf library.
+\newblock 117 SCTR-09-001, University of Bristol, January 2009.
+\newblock http://www.cs.bris.ac.uk/Publications/Papers/200970.pdf.
+
+\bibitem{fischler:81}
+Martin~A. Fischler and Robert~C. Bolles.
+\newblock Random sample consensus: a paradigm for model fitting with
+  applications to image analysis and automated cartography.
+\newblock {\em Commun. ACM}, 24(6):381--395, June 1981.
+
+\bibitem{Garcia:10}
+Vincent Garcia, Eric Debreuve, Frank Nielsen, and Michel Barlaud.
+\newblock K-nearest neighbor search: Fast gpu-based implementations and
+  application to high-dimensional feature matching.
+\newblock In {\em Image Processnig(ICIP),2010 17th IEEE International
+  Conference on}, pages 3757--3760, sep 2010.
+
+\bibitem{Gavrila:98}
+D~M. Gavrila.
+\newblock Multi-feature hierarchical template matching using distance
+  transforms.
+\newblock In {\em Proceedings of the 14th International Conference on Pattern
+  Recognition-Volume 1 - Volume 1}, ICPR '98, pages 439--, Washington, DC, USA,
+  1998. IEEE Computer Society.
+
+\bibitem{Gavrila:99}
+D.M. Gavrila and V.~Philomin.
+\newblock Real-time object detection for ldquo;smart rdquo; vehicles.
+\newblock In {\em Computer Vision, 1999. The Proceedings of the Seventh IEEE
+  International Conference on}, volume~1, pages 87 --93 vol.1, 1999.
+
+\bibitem{hartley:04}
+R.~I. Hartley and A.~Zisserman.
+\newblock {\em Multiple View Geometry in Computer Vision}.
+\newblock Cambridge University Press, ISBN: 0521540518, second edition, 2004.
+
+\bibitem{Kumar:10}
+Abhinav Kumar, Raja~Sekhar Bandaru, B~Madhusudan Rao, Saket Kulkarni, and
+  Nilesh Ghatpande.
+\newblock Automatic image alignment and stitching of medical images with seam
+  blending.
+\newblock {\em World Academy of Science, Engineering and Technology}, 2010.
+
+\bibitem{Laganière:11}
+Robert Laganière.
+\newblock {\em OpenCV 2 Computer Vision Application Programming Cookbook}.
+\newblock 2011 Packt Publishing, Packt Publishing Ltd.,Birmingham, UK, May
+  2011.
+\newblock http://www.packtpub.com.
+
+\bibitem{levin:04}
+Anat Levin, Assaf Zomet, Shmuel Peleg, and Yair Weiss.
+\newblock Seamless image stitching in the gradient domain.
+\newblock In {\em In Proceedings of the European Conference on Computer
+  Vision}, 2006.
+
+\bibitem{Li:11}
+Shuo Li.
+\newblock Registration of 3{D} volumetric {CT} images.
+\newblock Master's thesis, Uppsala University, Department of Information
+  Technology, November 2011.
+\newblock IT series, 11 080.
+
+\bibitem{lindegerg:96}
+Tony Lindeberg.
+\newblock Edge detection and ridge detection with automatic scale selection.
+\newblock In {\em Proceedings of the 1996 Conference on Computer Vision and
+  Pattern Recognition (CVPR '96)}, CVPR '96, pages 465--, Washington, DC, USA,
+  1996. IEEE Computer Society.
+
+\bibitem{Lowe:04}
+David~G. Lowe.
+\newblock Distinctive image features from scale-invariant keypoints.
+\newblock {\em Int. J. Comput. Vision}, 60(2):91--110, November 2004.
+
+\bibitem{Lucas:81}
+Bruce~D. Lucas and Takeo Kanade.
+\newblock An iterative image registration technique with an application to
+  stereo vision.
+\newblock In {\em Proceedings of the 7th international joint conference on
+  Artificial intelligence - Volume 2}, IJCAI'81, pages 674--679, San Francisco,
+  CA, USA, 1981. Morgan Kaufmann Publishers Inc.
+
+\bibitem{Mei:06}
+Xue Mei and Fatih Porikli.
+\newblock Fast image registration via joint gradient maximization: application
+  to multi-modal data.
+\newblock In {\em Proceedings of SPIE Volume 6395 Electro-Optical and Infrared
+  Systems: Technology and Applications III}, September 2006.
+
+\bibitem{muja:09}
+Marius Muja and David~G. Lowe.
+\newblock Fast approximate nearest neighbors with automatic algorithm
+  configuration.
+\newblock In {\em International Conference on Computer Vision Theory and
+  Application VISSAPP'09)}, pages 331--340. INSTICC Press, 2009.
+
+\bibitem{onder:01}
+\"Ozlem \"Onder.
+\newblock Least median squares: A robust regression techique.
+\newblock {\em Ege Academic Review}, 1(1):185--191, 2001.
+
+\bibitem{Parks:11}
+Donovan Parks and Jean-Philippe Gravel.
+\newblock Corner detection.
+\newblock Technical report, Faculty of Engineering, McGill University, Natural
+  Science and Engineering Research Council of Canada, 2011.
+\newblock http://kiwi.cs.dal.ca/~dparks/CornerDetection/index.htm.
+
+\bibitem{rankov:05}
+Vladan Rankov, Rosalind~J. Locke, Richard~J. Edens, Paul~R. Barber, and Borivoj
+  Vojnovic.
+\newblock An algorithm for image stitching and blending.
+\newblock In {\em Proceedings of SPIE}, pages 190--199, 2005.
+
+\bibitem{Rosten:06}
+Edward Rosten and Tom Drummond.
+\newblock Machine learning for high-speed corner detection.
+\newblock In {\em Proceedings of the 9th European conference on Computer Vision
+  - Volume Part I}, ECCV'06, pages 430--443, Berlin, Heidelberg, 2006.
+  Springer-Verlag.
+
+\bibitem{rousseeuw:84}
+Peter~J. Rousseeuw.
+\newblock Least median of squares regression.
+\newblock {\em The American Statistical Association}, 79(388), December 1984.
+\newblock http://web.ipac.caltech.edu.
+
+\bibitem{Sawhney:99}
+Harpreet~S. Sawhney and Rakesh Kumar.
+\newblock True multi-image alignment and its application to mosaicing and lens
+  distortion correction.
+\newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.}, 21(3):235--243, March
+  1999.
+
+\bibitem{Sinha:10:online}
+Utkarsha Sinha.
+\newblock Sift:{S}cale {I}nvariant {F}eature {T}ransform.
+\newblock
+  http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/7/, May
+  2010.
+\newblock Accessed: 17/09/2012.
+
+\bibitem{Sonka:08}
+Milan Sonka, Vaclav Hlavac, and Roger Boyle.
+\newblock {\em Image Processing, Analysis, and Machine Vision}.
+\newblock Library of Congress Control, 3rd edition, 2008.
+
+\bibitem{Sprawls:online}
+Perry Sprawls.
+\newblock X-ray {I}mage {F}ormation and {C}ontrast.
+\newblock http://www.sprawls.org/ppmi2/XRAYCON/.
+\newblock Accessed: 17/09/2012.
+
+\bibitem{Szeliski:06}
+Richard Szeliski.
+\newblock Image alignment and stitching: a tutorial.
+\newblock {\em Found. Trends. Comput. Graph. Vis.}, 2(1):1--104, January 2006.
+
+\bibitem{Szeliski:97}
+Richard Szeliski and Heung-Yeung Shum.
+\newblock Creating full view panoramic image mosaics and environment maps.
+\newblock In {\em Proceedings of the 24th annual conference on Computer
+  graphics and interactive techniques}, SIGGRAPH '97, pages 251--258, New York,
+  NY, USA, 1997. ACM Press/Addison-Wesley Publishing Co.
+
+\bibitem{uyttendaele:01}
+Matthew Uyttendaele, Ashley Eden, and Richard Szeliski.
+\newblock Eliminating ghosting and exposure artifacts in image mosaics.
+\newblock In {\em CVPR (2)}, pages 509--516. IEEE Computer Society, 2001.
+
+\bibitem{Viola:01}
+P.~Viola and M.~Jones.
+\newblock Rapid object detection using a boosted cascade of simple features.
+\newblock {\em Computer Vision and Pattern Recognition, 2001. CVPR 2001.
+  Proceedings of the 2001 IEEE Computer Society Conference on},
+  1:I--511--I--518 vol.1, 2001.
+
+\bibitem{Ward06:3}
+Greg Ward.
+\newblock Hiding seams in high dynamic range panoramas.
+\newblock In Roland~W. Fleming and Sunghee Kim, editors, {\em Proceedings of
+  the 3rd Symposium on Applied Perception in Graphics and Visualization, APGV
+  2006, Boston, Massachusetts, USA, July 28-29, 2006}, volume 153 of {\em ACM
+  International Conference Proceeding Series}, page 150. ACM, 2006.
+
+\bibitem{wiki:google-street-view}
+Wikipedia.
+\newblock Google street view.
+\newblock http://en.wikipedia.org/wiki/Google\_Street\_View, September 2012.
+\newblock Accessed: 16/09/2012.
+
+\bibitem{Woeste:09}
+Harald Woeste.
+\newblock {\em Mastering Digital Panoramic Photography}.
+\newblock Rocky Nook, 1st edition, November 2009.
+
+\bibitem{ziou:98}
+Djemel Ziou and Salvatore Tabbone.
+\newblock Edge detection techniques - an overview.
+\newblock {\em International Journal of Pattern Recognition and Image
+  Analysis}, 8:537--559, 1998.
+
+\end{thebibliography}
