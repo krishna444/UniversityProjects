@@ -1,0 +1,44 @@
+The next step after feature extraction is feature matching. As explained in section~\ref{sec:feature-extraction}, we will get a set of key points and their descriptors for each image. The matching process uses the descriptor information to find out the corresponding matching points in the images. All the points in one image are compared to all the points in other image and best matched point is identified. The nearest-neighborhood based algorithms are basically used for feature matching and since those methods are slower, we have to optimize to get the faster matching. The first section of this chapter gives exhaustive \emph{k-nearest-neighborhood (kNN)} method, then we discuss \emph{approximate nearest neighborhood (ANN)} method in the following section. The fine-tuning of the matching points has been described in last two sections.    
+
+\section{kNN Matching}
+\label{sec:knn-matching}
+ The k-nearest neighbor (kNN) search problem is widely used in classification problem. If we have a set $P$ of reference points $P=\left\{ p_1,p_2, p_3,...,p_m \right\}$ in $d$-dimensional space, and suppose $q$ be the query point defined in the same space, then kNN search problem determines the $k$ points closest to $q$ among $P$ as shown in figure~\ref{fig:knn-search}.  
+
+\begin{figure}%
+\centering
+\includegraphics[width=0.6\columnwidth]{2.mainmatter/2.Methodology/figures/Knn}%
+\caption[kNN Search]{kNN search problem with k=3. \imgsrc{(Image source: Garcia et al.~\cite{Garcia:10})}}%
+\label{fig:knn-search}%
+\end{figure}
+
+\section{ANN Matching}
+\label{section:ann-matching}
+Since, we have high dimensional feature vector \footnote{Each SIFT point has 128 features while a SURF point has 64 features}, and obviously we will have a lot of key points. So, in image stitching problems, exhaustive matching process (such as kNN) is very slow, we select an alternative approximate nearest neighborhood matching i.e. \emph{ANN Matching} where priority-search is carried out on hierarchical k-means trees~\cite{muja:09}. The nearest points need not necessarily be the actual matched points, further tests are necessary to increase matching accuracy (e.g. Ratio Test, Symmetry Test).\\
+
+\noindent The ANN algorithms can be orders of magnitude faster than kNN search, and provides nearest optimal accuracy~\cite{muja:09}. 
+
+
+\section{Removing False Matches}
+The nearest neighborhood based feature matching techniques mentioned above might contain a lot of false matches. Before we go for estimation of transformation parameters, we have to remove those false matches. This section describes the two effective methods to remove false matches: \emph{Ratio Test} and \emph{Symmetry} Test~\cite{Laganière:11}. 
+\subsection{Ratio Test}
+\label{sec:ratio-test}
+For kNN search, if we set $k=2$, the matching finds the two nearest points. The ratio test is based upon the ratio of distances of the two nearest points. Suppose $d_1$ and $d_2$ ($d_1<d_2$) be the distances of a point to its nearest matched points, and a we define a threshold $T$. Then, we reject the points as false matches which satisfy the following condition:
+\begin{equation}
+\frac{d_1}{d_2}>T
+\label{eq:ratio-test}
+\end{equation}
+If two nearest points are almost same distance, the ratio tend to be higher which implies the false matches, so ratio test confirms the nearest point should be very near and other point should be far. To what extent we remove the points depends upon the threshold $T$ selected i.e. higher the threshold, larger number of matches. Generally, we select $T$=0.8 i.e. if the distance ratio between the two nearest points is greater than 0.8, then ratio test discards that matching pair. Generally, we get more accurate matches by decreasing threshold value; but this is not always true. In some cases, if the image contains similar points (i.e. $d_1 \approx d_2$) in different locations, then ratio $\frac{d_1}{d_2}$ for a match might be higher than threshold ($T$) and the match is discarded.
+
+
+\subsection{Symmetry Test}
+\label{sec:symmetry-test}
+In symmetry test, we compute the matches between the images in both direction and select the matches which pass the symmetry test i.e. any matching pair should be symmetrically valid to be accurate match; otherwise the match is discarded as false match. This is very effective test to identify the false matches and we generally prefer to carry out this test after ratio test.\\
+
+\noindent Suppose, a key-point $p_1$ in the first image gets a matched point $p_1'$ in the second image, then match pair \{$p_1$, $p_1'$\} to be an accurate match, the key-point $p_1'$ in the second image should have matched point $p_1$ in the first image. If $p_1'$ gets other key-point as matched point then \emph{Symmetry Test} discards the matched pair \{$p_1$, $p_1'$\}. This test is simple to implement and we do not need any parameters to perform this test.
+
+\newpage
+\section{Experimental Results}
+\label{sec:feature-matching-experimental-result}
+\input{2.mainmatter/2.Methodology/Results(FeatureMatching)}
+
+

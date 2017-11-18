@@ -1,0 +1,24 @@
+\chapter{Feature Extraction}
+Image stitching process starts  from feature extraction. In previous chapter, I introduced the basics of corner detection in an image. Each corner in an image has features and we try extract the corners in images and assign features to them. There are some notable advantages using corners as features:
+\begin{enumerate}
+	\item Instead of matching all the pixels in an image, we focus on matching corners only. Since the number of corners is much smaller than the total number of pixels, matching is faster.
+	\item Since corner is a point, it is easy to get transformation parameters using the locations of the matching corners. 
+\end{enumerate}
+Like every image processing task, the feature extraction starts with preprocessing (section~\ref{sec:preprocessing}) to remove image noise, correct intensity differences etc. There are several algorithms for feature extraction, I have discussed the most popular feature extraction methods (i.e. Harris, SIFT, SURF) in section~\ref{sec:feature-extraction}.
+
+\input{2.mainmatter/2.Methodology/FeaturesExtraction/Preprocessing}
+\input{2.mainmatter/2.Methodology/FeaturesExtraction/FeatureExtraction}
+
+\chapter{Features Matching}
+\label{chapter:feature-matching}
+\input{2.mainmatter/2.Methodology/FeaturesMatching}
+
+
+\chapter{Homography Estimation}
+\label{chapter:homography-estimation}
+\input{2.mainmatter/2.Methodology/HomographyEstimation}
+
+\chapter{Compositing}
+\label{chapter:compositing}
+\input{2.mainmatter/2.Methodology/Compositing}
+

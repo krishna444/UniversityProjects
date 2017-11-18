@@ -1,0 +1,57 @@
+The Harris Corner Detection was developed by \emph{Chris Harris} and \emph{Mike Stephens} in 1988~\cite{Parks:11}. It is widely used algorithms for corner detection.\\
+
+\noindent The Harris algorithm can be described as follows~\cite{Parks:11}:\\
+
+\noindent \textbf{Input:}\textit{Gray-scale Image, Gaussian Variance (radius of window=3 x standard deviation),k value, threshold T}\\
+\textbf{Output:}\textit{Map with position of detected corners}\\
+\begin{enumerate}
+	\item For each pixel $(x,y)$ in the image, calculate the \emph{auto correlation matrix} $M$ as follows:\\ 
+	\begin{equation}
+		M=\left[ \begin{array}{cc}
+			A & C\\
+			C & B 
+		\end{array}
+		\right] 
+	\label{eq:hessian-matrix}
+	\end{equation}			
+	where 
+	\begin{equation}
+					A=\left(\frac{\partial I}{\partial x}\right)^2 \otimes w 
+	\label{eq:A}
+	\end{equation}
+	
+	\begin{equation}
+	        B=\left( \frac{\partial I}{\partial y} \right)^2 \otimes w, 
+	\label{eq:B}
+	\end{equation}
+	
+	\begin{equation}
+				 C=\left( \begin{array}{c}\frac{\partial I}{\partial x} \frac{\partial I}{\partial y}\end{array}\right) \otimes w
+	\label{eq:C}
+	\end{equation} 
+				$\otimes$ is the convolution operator\\
+				and, $w$ is the Gaussian window	
+						
+\item Construct the \emph{cornerness map} by calculating the cornerness measure $Cornerness(x,y)$ for each pixel (x,y):\\
+\begin{equation}
+Cornerness(x,y)=det(M)-k(trace(M))^2
+\label{eq:cornerness-map}
+\end{equation} 
+where 
+\begin{equation}
+det(M)=AB-C^2 \approx \lambda_1 \lambda_2,
+\label{eq:deter-M}
+\end{equation}
+
+\begin{equation}
+trace(M)=A+B \approx \lambda_1+ \lambda_2
+\label{eq:trace-M}
+\end{equation}
+and\\
+k=a constant (generally, k between 0.04 to 0.5 gives good result.)
+
+\item Threshold the interest map by setting all $Cornerness(x,y)$ below a threshold $T$ to zero. The number of corners depends upon the selected threshold $T$, decreasing $T$ results increment in corners.
+\item Perform non-maximal suppression to find local maxima.
+ The non-zero points remaining in the cornersness map are corners.					
+	 
+\end{enumerate}
