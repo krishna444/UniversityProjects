@@ -1,0 +1,18 @@
+%Please use no more than 300 words and avoid mathematics or complex script.
+\chapter*{Abstract}
+%\noindent This thesis report discusses how two or more X-ray images can be joined together to form a single image. The stitching process includes registration, transformation and blending steps. The basics of registration starts from pixel wise matching(like exhaustive matching, Chamfer matching etc.). To make those methods faster and more accurate, I have chosen feature based matching algorithms where a number of feature points are extracted and matched.\\
+
+%\noindent Some of the popular feature extraction methods are \textit{Harris Points Detector}, \textit{SIFT},\textit{SURF} etc.  The improved Random Sample Consensus(RANSAC) method has been used to get the best matched points which gives the transformation parameters(Homography Matrix, Fundamental Matrix etc.). The final phase of image stitching is to remove the seams and discontinuities on the joined part of the stitched image. Some blending methods like alpha blending, pyramid blending etc. have been analyzed and implemented.\\
+
+%\noindent The selection criteria of the above mentioned algorithms are speed, accuracy, intensity invariance, scale invariance, rotation invariance. The analysis part is mainly focused on getting the best feature extraction, registration and blending methods. Finally, those selected methods have been implemented to develop a good image stitching application which can be integrated in any medical software. 
+
+\noindent Image processing and analysis algorithms are widely used in medical systems to analyze medical images to help diagnose the disease of a patient. This thesis covers one of the demanding problem of medical systems: \emph{Stitching of X-ray Images}. The flat panel of X-ray system cannot cover all part of a body, so image stitching is incorporated in the medical system to combine two or more X-ray images and get a single high resolution image of the body part. The output of this thesis work is to develop a real-time and user interactive stitching application which works for X-ray images of different intensity and orientation.\\ 
+
+\noindent The stitching process consists of two main steps: \emph{Image Registration} and \emph{Blending}. Many existing image registration methods are based on classical pixel-wise matching(exhaustive matching) or Chamfer matching which are slower registration methods. So, key-points based methods (Harris, SIFT, SURF) are selected to make the registration faster. The features of key-points computed from the key-point extractors are then used for matching. The exhaustive \emph{nearest neighborhood (NN)} based matching method has been evaluated with \emph{approximate nearest neighborhood method (ANN)}. The further simple tests (\emph{Ratio Test} and \emph{Symmetry Test}) are employed to improve the accuracy of the matches for better registration result.\\
+
+\noindent The overlapping area of the registered images are blended to remove the seams and discontinuities of the composite image. The thesis evaluates two blending methods: \emph{Pyramid Blending} and \emph{Alpha Blending} in terms of accuracy and computational complexity. The advanced blending with blending masks for complexly aligned images is giving a very encouraging result.\\
+
+
+
+
+
