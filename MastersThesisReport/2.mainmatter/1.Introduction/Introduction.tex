@@ -1,0 +1,121 @@
+\chapter{Introduction}
+\label{chapter:introduction}
+%The histroy of image stitching
+The medical imaging technology involves the creation of images of a body part to diagnose the disease in the patient. The advent of digital technology has made the medical image processing easier and very fast. The very fast computing technology helps physician diagnose diseases by real time and automated processing of medical images. This project \emph{``Stitching of X-ray Images''} takes multiple X-ray images of a body part and creates a single, high resolution image. Stitching of medical images is similar to creation of panorama of a scene using several images of a scene. Google has implemented image stitching technology to display the street view of a city~\cite{wiki:google-street-view}.\\
+
+\noindent This report presents the stitching of 2D gray scale medical images; the methods and algorithms can be extended to work for color images too. An X-ray photographic plate is not large enough to fully cover some parts of the body like legs, spines, hands etc. To solve this problem, we capture multiple images of the body part. Then image stitching creates a single high resolution image representing full body part. The single image of the body part makes easy for physicians to diagnose a disease, it is easy to track, manage, store and transmit for electronic medical software.\\
+
+\noindent Algorithms for aligning images and stitching them into seamless photo-mosaics are among the oldest and most widely used in computer vision. Image stitching algorithms create the high resolution photo-mosaics used to produce today's digital maps and satellite photos. They also come bundled with most digital cameras currently being sold, and can be used to create beautiful ultra wide-angle panoramas~\cite{Szeliski:06}. Creating high resolution images by combining smaller images are popular since the beginning of the photography~\cite{Kumar:10}.\\
+
+\noindent There should be nearly exact overlaps between images for stitching and identical exposures to produce seamless results~\cite{Ward06:3}. The stitching is not possible if there is not any common region between images. The images of same scene will be of different intensities, scale and orientation and stitching should work or at least give visually appealing output. \\
+
+\noindent Several algorithms are there to accomplish image stitching, but no algorithm is guaranteed to work with 100\% accuracy. The traditional algorithms carry out pixel wise registration (\emph{exhaustive method}) which use some error criteria to get the best result i.e. the best registration is the one which gives least error value. Those methods are slower and sometimes there is chance of not giving the best result. The feature based registration methods find distinctive features in each image and then efficiently match to rapidly establish correspondences between pairs of images to determine the approximate \emph{motion model}. Feature-based approaches have the advantage of being more robust against scene movement and are potentially faster, if implemented the right way\cite{Szeliski:06}. The common feature points are used to create the relationships between the images which makes them suitable for automated stitching.\\
+
+\noindent This first section of this chapter gives introduction to X-ray imaging; describes how X-ray images are produced and their characteristics. The following sections discuss the various types of image alignment methods and the overall stitching process. The challenges of the image stitching have been discussed in the last section. 
+
+\section{X-Ray Imaging}
+The X-ray technology was developed in 1895 by \textit{Wilhelm Roentgen}, a German physicist. X-rays are produced by changing the energy state of electrons. The highly accelerated electrons are decelerated by bombarding on a metal block. The interaction of electrons in metal block change the energy state releasing X-rays. The X-rays production process is shown in figure~\ref{fig:x-ray-tube}.\\
+
+\begin{figure}%
+\centering
+\subfloat[X-ray Tube]{\includegraphics[width=0.7\columnwidth]{2.mainmatter/1.Introduction/figures/x-ray-tube}\label{fig:x-ray-tube}}%
+\subfloat[X-ray image of Chest]{\includegraphics[width=0.3\columnwidth]{2.mainmatter/1.Introduction/figures/chest-x-ray}\label{fig:x-ray-image}}
+\caption[Production of X-ray]{Production of X-ray:~\subref{fig:x-ray-tube} is X-ray tube used to produce X-ray images.~\subref{fig:x-ray-image} is a sample X-ray image.}
+\end{figure}
+\begin{description}
+\item[Flat Panel Receptors] The X-rays can penetrate soft body parts and go into the bones, so X-ray images are used to view and analyze inner body parts for pathology. X-rays are detected by using \textit{image receptors (IR)}. The new digital technology has been replacing the old technology which uses films and chemicals to store X-ray images. The \emph{Flat Panel Receptors} stores the X-ray images digitally and those digital X-ray images are portable i.e. they can easily be available in multiple places. We can use computer-assisted diagnosis methods to digital X-ray images. Figure~\ref{fig:x-ray-system} shows an X-ray machine which consists of X-ray generator and flat panel receptor. The body is placed in between the X-ray source and receptor so that it can penetrate the body part. The X-rays which pass through the body part are stored in the receptor.
+\end{description}
+
+\begin{figure}%
+\centering
+\subfloat[]{
+\includegraphics[width=0.5\columnwidth]{2.mainmatter/1.Introduction/figures/X-ray-machine}%
+\label{fig:x-ray-machine}
+}%
+\hspace{8pt}
+\subfloat[]{
+\includegraphics[width=0.4\columnwidth]{2.mainmatter/1.Introduction/figures/flat-panel}
+\label{fig:flat-panel}
+}%
+\caption[X-ray Imaging System]{X-ray Imaging System.~\subref{fig:x-ray-machine} X-ray Machine~\subref{fig:flat-panel} Flat Panel \tiny({Image source: http://www.protec-med.com})}
+\label{fig:x-ray-system}
+\end{figure}
+
+\noindent X-ray images are negative images i.e. dense object like bone or metal fragments display brighter while the soft parts look darker. The X-ray images depicts all the object's features inside and out, so a point in an x-ray image is the summation of shadows; while general photograph shows only object's surface. In other words, the brightness of a point in the film is the summation of all the densities the ray encountered~\cite{Durnavich:00:online}.\\ 
+
+\begin{itemize}
+
+	\item{\textit{Scaled and Oriented X-ray Images}} Since the X-ray tube is movable, the distance of the tube to the body part determines the scale of the image. When X-ray tube is very near to the patient, the image will be distorted because of magnification. Similarly, when X-ray tube is rotated laterally, we get perspective images. We get rotated images because of mobile patient table. 
+	
+	\item{\textit{Density of X-ray images}} The density of X-ray image is  the overall blackness or darkness of the film. The flesh, or soft tissue is the least dense and therefore allows for the x-ray to pass easily to the film. Many X-ray photons interact with the film causes the density on the film to black. So, thickness of the body part is inversely proportional to the density of the film. The exposure time, operative voltage peak and current also control the density i.e. if operating voltage and current increases, film density also increases. The overexposed film has a high density, blackens the film and underexposed film has low density means it is white.
+	
+\item{\textit{Contrast of X-ray images}} The contrast of X-ray image depicts the difference in degree in blackness between adjacent areas. The image with low contrast contains many shades of gray while high contrast image consists of very dark and very light areas. X-ray contrast is produced because X-ray penetration through an object differs from the penetration through the adjacent background tissue. The radio-graphic recording system should be able to fully record all the contrast in the X-ray image~\cite{Sprawls:online}.
+\end{itemize}
+
+
+
+
+
+
+\section{Pixel Based Alignment}
+Before stitching is carried out, two images need to be aligned properly so that the same region in the images overlap each other. Pixel based alignment methods are classical methods which carry out pixel-wise comparison of the two images. We shift or warp images relative to each other and look at how much the pixels agree. The pixel-to-pixel matching methods are also called direct methods. We use suitable error metric (section 3.6) and we carry out exhaustive search for all possible alignments to get optimal alignment. This is very slow process; so hierarchical coarse-to-fine techniques based on image pyramids can be used to make it faster~\cite{Szeliski:06}.
+
+
+
+
+\section{Feature Based Alignment}
+The pixel based alignment methods are not appropriate for real time image stitching applications which includes large (i.e. high resolution) X-ray images. So, \emph{feature based alignment} methods are selected to get faster stitching. The feature based method extract the distinctive features from each image to match those features to establish global correspondence and then estimate the geometric transformation between the images~\cite{Szeliski:06}. Interest points (corners) in the image are selected as feature points and the feature descriptors are extracted for each point. The feature descriptors describe the point and for matching process, those descriptors should be invariant to image rotation, scaling or even intensity variations. To find the matching points, the points in one image are compared to the point in another image, an appropriate distance measure is implemented to find out the similarity between the points, and matching pairs have the minimum distance between them. 
+
+%Image Stitching Process
+\section{Image Stitching Process}
+In this section, I will describe the fundamental steps of image stitching. Image stitching system gets two or more images as input and the output will be a single stitched image. The image stitching process can be divided into 5 sub-processes mentioned below:
+\begin{description}
+\item [\textit{Feature detection}]
+This step gets the input images\footnote{input images should be already preprocessed by noise reduction, intensity leveling etc.} and features of the images are extracted. The important points (also called \textit{key points} or \textit{corners}) in the image are identified using one of the corner detection methods. The concept of corner detection will be discussed in section~\ref{sec:corners-in-image}. Each feature point will have unique descriptor which is used for feature matching.   
+
+\item [\textit{Feature matching}]
+After we get a number of feature points in the images, the next step is to match the feature points. The similar points in the images are identified using one of the feature matching techniques. %[section~\ref{sec:feature-matching}].
+The feature matching step gives the best matching point pairs between the images which are used for estimation of motion parameters.
+
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{2.mainmatter/1.Introduction/figures/stitching-flowchart}%
+%\caption{Image Stitching Flow Chart}%
+%\label{fig:stitching-flowchart}%
+%\end{figure}
+
+
+
+\item [\textit{Motion estimation}]
+Based on the matching points, we estimate the motion parameters (like transformation, rotation or scale parameters). To estimate the motion parameters, we need true matched points. The false matching points gives wrong motion parameters which produce incorrect alignment. We create a mathematical model with the motion parameters, and the best model is selected which represents most of the matched points (RANSAC) or gives least error value (LMS) as described in chapter~\ref{chapter:homography-estimation}.   
+ 
+\item [\textit{Transformation}]
+After we estimate the motion parameters, the next step is to transform the image. The transformation includes translation, rotation, scaling or perspective transform. After transformation, we get the aligned image with overlapping areas lying on the same location of the composite image.  
+\item [\textit{Blending}]
+This is final step of image stitching. If the overlapping areas are not exact\footnote{The overlapping areas are never exact in real problems}, we get visible lines (seams) in the composite image. So, we use blending techniques to remove those discontinuities. The blending techniques have been discussed in chapter~\ref{chapter:compositing}.
+\end{description}
+
+
+
+\section{Challenges of Image Stitching}
+Image stitching, in real life medical applications, consists of several challenges to get the better result. The stitching system should be able to work or to some extent give better output result for medical images. In this section, I am going to highlight some of the challenges of image stitching.
+\begin{description}
+  \item [\textit{Image Noise}]{If image is noisy, there may be chances that stitching methods fail to give accurate result. So, we have to implement some mechanism as pre-processing to suppress or remove the noise to get the better result. The corner-based stitching methods are very sensitive to noise because they give a lot of false corner-points.}
+	\item [\textit{Computational Time}]{The stitching methods are slower, if we don't optimize the methods, it takes a lot of time to get the result because of heavy computation (feature based methods) or lengthy process (direct methods) required. The high resolution images contain a lot of pixels in the image, so, the direct methods require a lot of time to align the methods. The feature based methods require heavy computation to get and match the features in the image. The optimization of the methods should be done in such a way that it results acceptable accuracy (trade-off between computational-complexity and accuracy)}
+	\item [\textit{Intensity Variation}]{Some image stitching methods are very sensitive to variation image intensities resulting inaccurate stitching. Again, intensity variation in images causes problem in blending also because it creates a seam line in the join of the image.}
+	\item [\textit{Image Orientation}]{The images to be stitched need not necessarily in same orientation. The rotation, scaling, distortion between images should be covered by the stitching methods i.e. the stitching methods should give accurate result for rotated, scaled or distorted images.}	
+\end{description}
+
+%Related Work
+\chapter{Related Work}
+\input{2.mainmatter/1.Introduction/RelatedWork}
+%Background Theory
+\chapter{Background Theory}
+\input{2.mainmatter/1.Introduction/BackgroundTheory}
+
+
+
+%\cite{Szeliski:06}
+% X-ray images
+% Why Image stiching is challenging?
+% WorkFlow
+% Areas of Application
